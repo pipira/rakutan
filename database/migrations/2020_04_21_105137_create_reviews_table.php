@@ -19,6 +19,7 @@ class CreateReviewsTable extends Migration
             $table->integer('class_id');
             $table->text('sentence');
             $table->integer('star');
+            $table->softDeletes();
         });
     }
 

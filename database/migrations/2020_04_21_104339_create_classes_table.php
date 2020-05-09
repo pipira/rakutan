@@ -15,9 +15,11 @@ class CreateClassesTable extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('professor_id');
+            $table->integer('professor_id');
             $table->string('name', 50);
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
