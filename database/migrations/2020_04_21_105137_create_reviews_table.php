@@ -15,10 +15,11 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('user_id');
-            $table->increments('class_id');
+            $table->integer('user_id');
+            $table->integer('class_id');
             $table->text('sentence');
             $table->integer('star');
+            $table->softDeletes();
         });
     }
 
