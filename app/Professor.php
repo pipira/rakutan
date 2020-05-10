@@ -13,4 +13,9 @@ class Professor extends Model
     protected $fillable = [
         'body'
     ];
+
+    public function classes()
+    {
+        return $this->hasMany('App\Class');
+    }
 }

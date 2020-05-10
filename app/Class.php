@@ -13,4 +13,19 @@ class Class extends Model
     protected $fillable = [
         'body'
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review');
+    }
+
+    public function favorites()
+    {
+        return $this->hasMany('App\Favorite');
+    }
+
+    public function professor()
+    {
+        return $this->belongsTo('App\Professor');
+    }
 }
