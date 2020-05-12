@@ -11,7 +11,7 @@ class Class extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'body'
+        'professor_id','name'
     ];
 
     public function reviews()

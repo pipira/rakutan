@@ -11,7 +11,7 @@ class Favorite extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'body'
+        'user_id','class_id'
     ];
     public function user()
     {
