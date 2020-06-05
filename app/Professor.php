@@ -11,6 +11,11 @@ class Professor extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'body'
+        'name'
     ];
+
+    public function classes()
+    {
+        return $this->hasMany('App\Class');
+    }
 }

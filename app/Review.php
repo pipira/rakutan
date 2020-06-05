@@ -11,6 +11,16 @@ class Review extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'body'
+        'user_id','class_id','sentence','star'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function class()
+    {
+        return $this->belongsTo('App\Class');
+    }
 }
